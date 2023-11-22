@@ -20,7 +20,6 @@ fs.readFile(filePath, 'utf8', function(err,data) {
     urlArr = data.split("\n")
 
     for (let i=0; i<urlArr.length; i++){
-        console.log(urlArr[i])
         axios.get(urlArr[i])
             .then(res => {
                 const htmlContent = res.data;
